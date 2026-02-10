@@ -3,20 +3,21 @@ import Footer from "@/components/Footer";
 import SideDescription from "@/components/SideDescription";
 
 export default function Home() {
-return ( <main style={page}> 
-  <h1 style={title}>Online Calculator</h1>
-  <p style={subtitle}>
-    Free scientific calculator with keyboard support. Fast, modern, and accurate.
-  </p>
+  return (
+    <main style={page}>
+      <h1 style={title}>Online Calculator</h1>
+      <p style={subtitle}>
+        Free scientific calculator with keyboard support. Fast, modern, and accurate.
+      </p>
 
-  <div style={toolSection}>
+      <div style={toolSection}>
         <Calculator />
         <SideDescription />
       </div>
-  <Footer />
-</main>
 
-);
+      <Footer />
+    </main>
+  );
 }
 
 const page = {
@@ -62,6 +63,6 @@ const toolSection = {
   width: "100%",
   maxWidth: "1100px",
   margin: "10px auto 20px", // reduced vertical margin
-  flexWrap: "wrap", // mobile friendly
+  flexWrap: "wrap" as const, // mobile friendly
 };
 
