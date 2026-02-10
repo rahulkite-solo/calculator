@@ -15,10 +15,18 @@ export default function ThemeProvider({
   }, []);
 
   useEffect(() => {
-    document.body.style.background = dark ? "#0f172a" : "#f5f5f5";
-    document.body.style.color = dark ? "white" : "black";
-    localStorage.setItem("theme", dark ? "dark" : "light");
-  }, [dark]);
+  document.body.style.transition = "background 0.3s ease";
+  document.body.style.background = dark ? "#0f172a" : "#f5f5f5";
+  document.body.style.color = dark ? "white" : "black";
+
+  document.documentElement.style.setProperty(
+    "--card-bg",
+    dark ? "#1f2937" : "white"
+  );
+
+  localStorage.setItem("theme", dark ? "dark" : "light");
+}, [dark]);
+
 
   return (
     <>

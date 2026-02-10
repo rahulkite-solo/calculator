@@ -1,17 +1,18 @@
 import Calculator from "@/components/Calculator";
 import Footer from "@/components/Footer";
+import SideDescription from "@/components/SideDescription";
 
 export default function Home() {
-return ( <main style={page}> <div style={ad}>Google Ad Banner</div>
-  <h1 style={title}>Premium Online Calculator</h1>
+return ( <main style={page}> 
+  <h1 style={title}>Online Calculator</h1>
   <p style={subtitle}>
     Free scientific calculator with keyboard support. Fast, modern, and accurate.
   </p>
 
-  <Calculator />
-
-  <div style={ad}>Google Ad Banner</div>
-
+  <div style={toolSection}>
+        <Calculator />
+        <SideDescription />
+      </div>
   <Footer />
 </main>
 
@@ -23,21 +24,23 @@ const page = {
   display: "flex",
   flexDirection: "column" as const,
   alignItems: "center",
-  gap: "30px",
-  padding: "40px 20px",
-  background: "transparent", // ← important
+  gap: "10px", // tighter spacing
+  padding: "20px 20px 10px", // less top padding
+  background: "transparent",
 };
 
 const title = {
-fontSize: "36px",
-fontWeight: "bold",
-color: "#111",
+  fontSize: "34px",
+  fontWeight: "bold",
+  color: "#111",
+  margin: "0",
 };
 
 const subtitle = {
-color: "#555",
-maxWidth: "600px",
-textAlign: "center" as const,
+  color: "#555",
+  maxWidth: "600px",
+  textAlign: "center" as const,
+  marginBottom: "10px",
 };
 
 const ad = {
@@ -49,5 +52,16 @@ const ad = {
   alignItems: "center",
   justifyContent: "center",
   borderRadius: "8px",
+};
+
+const toolSection = {
+  display: "flex",
+  gap: "30px",
+  justifyContent: "center",
+  alignItems: "flex-start",
+  width: "100%",
+  maxWidth: "1100px",
+  margin: "10px auto 20px", // reduced vertical margin
+  flexWrap: "wrap", // mobile friendly
 };
 

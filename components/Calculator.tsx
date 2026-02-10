@@ -92,7 +92,7 @@ export default function Calculator() {
 }
 
 const container = {
-  width: "360px",
+  width: "365px",
   background: "#111",
   padding: "20px",
   borderRadius: "16px",
@@ -107,7 +107,7 @@ const screen = {
   borderRadius: "10px",
   textAlign: "right" as const,
   marginBottom: "12px",
-  minHeight: "50px",
+  minHeight: "45px",
 };
 
 const grid = {
@@ -120,7 +120,7 @@ const sciGrid = {
   display: "grid",
   gridTemplateColumns: "repeat(3, 1fr)",
   gap: "10px",
-  marginBottom: "10px",
+  marginBottom: "5px",
 };
 
 const button = {
